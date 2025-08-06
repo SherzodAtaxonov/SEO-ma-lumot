@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/Men bilan boglanish</title>
+    <link rel="stylesheet" href="/men.css">
+</head>
+<body>
+        <header>
+            <h1>Serch Engine Optimization</h1>
+            <nav>
+                <a href="/index.html">Asosiy</a>
+                <a href="/malumot.html">Ma'lumot</a>
+                <a href="/men.html">Men bilan boglanish</a>
+            </nav>
+        </header>
+        <main>
+            <form class="my-form" id="my-form" action="index.html" method="GET">
+                <fieldset>
+                    <legend>Murajat qilish</legend>
+                    <label for="fulName">To'li ism :</label>
+                    <input type="text" name="fulName" id="fulName" required placeholder="Ismingizni kiriting">
+                    <label for="email">Email manzil :</label>
+                    <input type="email" name="email" id="email" required placeholder="Emailingizni kiriting">
+                    <label for="password">Porol :</label>
+                    <input type="password" name="password" id="password" required placeholder="Porol kiriting"  >
+                    <label for="gender">Jinsingiz :</label>
+                    <select name="gender" id="gender" required>
+                        <option value="">Tanlang</option>
+                        <option value="Erkak">Erkak</option>
+                        <option value="Ayol">Ayol</option>
+                    </select>
+                    <label for="comment">Yozing</label>
+                    <textarea name="comment" id="comment" rows="2" cols="30"></textarea>
+                    <label>
+                        <input type="checkbox" name="agree" required>
+                        Shartlaga roziman
+                    </label>
+                    <button type="reset">Tozalash</button>
+                    <button type="submit">Yuborish</button>
+                </fieldset>
+            </form>
+            <p id="message">Yuborildi</p>
+            <script>
+                const form =document.getElementById('my-form')
+                const message =document.getElementById('message')
+                    
+
+                form.addEventListener("submit", (e)=>{
+
+                    e.preventDefault();
+                    form.style.display="none"
+                    message.style.display ="block"
+                
+                    setTimeout(()=>{
+                        window.location.href = "index.html"
+                    },3000)
+                })
+
+            </script>
+        </main>
+        <footer>
+            <p>&copy; 2025 Sherzod tomonidan yaratildi.</p>
+        </footer>
+</body>
+</html>
